@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="utf-8">
+	<title>Резюме Бобира Олександра</title>
+	<style>
+		body { font-family: Arial, Helvetica, sans-serif; }
+		.resize { margin: 0 auto; padding: 20px; max-width: 980px; }
+		.userpic { float: left; margin: 0 20px 12px 0; }
+		p { margin: 0; padding: 8px 0; }
+		h1 { margin: 0 0 12px; }
+		h1 span { display: block; padding: 8px 0 0; font-size: 60%; font-weight: normal; }
+		h2 { font-size: 120%; }
+		.contacts a { display: inline-block; padding: 4px 0; }
+		.contacts small { margin-left: 12px; font-size: 80%; color: #666; }
+		ul { margin: 0; padding: 0 0 0 20px; list-style: none; }
+		ul li { padding-bottom: 24px; }
+		ul .title { padding-bottom: 8px; font-size: 110%; }
+		ul .title .location { margin-left: 12px; font-size: 60%; color: #666; }
+		ul .date { margin-right: 12px; font-size: 80%; color: #666; }
+		ul small { margin-left: 12px; font-size: 80%; color: #666; }
+		ul .show-details { padding: 0 2px; text-decoration: underline; text-decoration-style: dashed; cursor: pointer; }
+		ul .details { display: none; padding: 8px 0 8px 20px; font-size: 90%; color: #666; }
+		@media print {
+			a { color: #000; text-decoration: none; }
+			ul { padding-left: 0; }
+			ul small { display: none; }
+			ul .details { display: block; }
+		}
+	</style>
+</head>
+<body>
+<div class="resize">
+
+	<img class="userpic" src="userpic.jpg" alt="Бобир Олександр">
+	<h1>
+		Бобир Олександр
+		<span>фронтенд-розробник</span>
+	</h1>
+
+	<p class="contacts">
+		<a href="viber://chat?number=+380682096694">+38(068) 209-66-94</a> <small>(viber)</small><br>
+		<a href="mailto:poshtar.boba@gmail.com">poshtar.boba@gmail.com</a><br>
+		<a href="https://poshtarboba.github.io">poshtarboba.github.io</a>
+	</p>
+
+	<p class="prof">Займаюсь версткою, створенням js-плагінів, веб-графікою (SVG, canvas, анімація), розробкою користувацьких інтерфейсів (UI/UX)</p>
+
+	<section class="work">
+		<h2>Робота:</h2>
+		<ul>
+			<li>
+				<p class="title">
+					<a href="https://circle.com.ua/" target="_blank">Circle Web Academy</a>
+					<!--<span class="location">(Хмельницький)</span>-->
+				</p>
+				<p>
+					<span class="date">з 2015</span>
+					автор і викладач курсів "Верстка", "JavaScript" та "Веб-графіка".
+				</p>
+			</li>
+			<li>
+				<p class="title">
+					toAvalon
+					<!--<span class="location">(Хмельницький)</span>-->
+				</p>
+				<p>
+					<span class="date">2017.11 &mdash; 2018.08</span>
+					проект <a href="http://nau.io/" target="_blank">nau.io</a>
+					<small>(<span class="show-details js-slide-handle" data-target="#detailsNau">деталі</span>)</small>.
+				</p>
+				<div class="details" id="detailsNau">
+					<p>Проект запущено у декількох країнах (Україна, Росія, Філіпіни, Китай, Колумбія...).</p>
+					<p>Являє собою рекламну площадку сервісних точок (продаж кави, заклади харчування, готелі, спа, техобслуговування авто і т.п.): потенційний клієнт через мобільний додаток може знайти найближчу точку де він може отримати знижку, подарунок.</p>
+					<p>Проект використовує блокчейн для реєстрації отримання подарунку, відгуків клієнтів і т.д.</p>
+					<p>Я займався адмінкою для агентів, корпоративних клієнтів, адміністратора системи, адміністраторів закладів обслуговування.</p>
+					<p>Працював з геолокацією і часовими поясами, використовував API Google, OpenStreetMap, бібліотеку <a href="https://leafletjs.com/" target="_blank">Leaflet.js</a> для інтерактивних карт.</p>
+				</div>
+				<p>
+					<span class="date">2016.04 &mdash; 2017.10</span>
+					проект "Medico: вызов врача на дом"
+					<small>(<span class="show-details js-slide-handle" data-target="#detailsMedico">деталі</span>)</small>.
+				</p>
+				<div class="details" id="detailsMedico">
+					<p>Проект розроблявся для Росії, потрібно було враховувати часові пояси.</p>
+					<p>Я займався адмінками для адміністратора, оператора, врача.</p>
+					<p>Написав календар подій, що рухався в часі.</p>
+				</div>
+			</li>
+			<li>
+				<p class="title">
+					<a href="https://softbistro.com/" target="_blank">SoftBistro</a>
+					<!--<span class="location">(Хмельницький)</span>-->
+				</p>
+				<p>
+					<span class="date">2014 &mdash; 2016</span>
+					проект <a href="https://loomlogic.com/" target="_blank">LoomLogic</a>
+					<small>(<span class="show-details js-slide-handle" data-target="#detailsLoomLogic">деталі</span>)</small>.
+				</p>
+				<div class="details" id="detailsLoomLogic">
+					<p>Проект для американського ринку нерухомості, що об'єднує клієнтів, ріелторів та банки, надає зручну площадку для пошуку нерухомості, агентів, клієнтів, вигідних банківських пропозицій.</p>
+					<p>Я створював внутрішні сторінки з послугами, налаштуваннями, статистикою, профілями, пошуком і т.д.</p>
+					<p>Бекенд проекту на рубі, фронтенд писав на HAML + SASS + CoffeeScript</p>
+				</div>
+			</li>
+			<li>
+				<p class="title">
+					Фріланс
+				</p>
+				<p>
+					<span class="date">2007 &mdash; 2015</span>
+					виконував різні невеликі проекти з фріланса для різних студій Хмельницького і Каліфорнії.
+				</p>
+			</li>
+			<li>
+				<p class="title">
+					<a href="https://www.fantero.com/" target="_blank">Fantero</a>,
+					<a href="https://rexsoftinc.com/" target="_blank">Rexoft</a>
+					<!--<span class="location">(Хмельницький)</span>-->
+				</p>
+				<p>
+					<span class="date">2011 &mdash; 2012</span>
+					проект CupLife
+					<small>(<span class="show-details js-slide-handle" data-target="#detailsCupLife">деталі</span>)</small>.
+				</p>
+				<div class="details" id="detailsCupLife">
+					<p>Вітчизняна соціальна мережа, схожа на Pinterest (пости у вигляді пінів, стрічка новин у декілька колонок), з різними додатковими функціями, чатами.</p>
+					<p>Я займався фронтенд-частиною проекту.</p>
+				</div>
+				<p>
+					<span class="date">2009 &mdash; 2012</span>
+					верстав різні проекти, сотні шаблонів під WordPress та Jomla
+				</p>
+			</li>
+			<li>
+				<p class="title">
+					ПриватБанк
+					<!--<span class="location">(Хмельницький, Київ)</span>-->
+				</p>
+				<p>
+					<span class="date">2006 &mdash; 2009</span>
+					програміст (Delphi, Python), банкоматчик, бухгалтер, сісадмін, кур'єр і т.п., багато професій прийшося спробувати.
+				</p>
+			</li>
+			<li>
+				<p class="title">
+					Швидка медична допомога
+					<!--<span class="location">(Хмельницький)</span>-->
+				</p>
+				<p>
+					<span class="date">2001 &mdash; 2005</span>
+					системний адміністратор, програміст (Delphi)
+				</p>
+			</li>
+
+		</ul>
+	</section>
+
+	<section class="work">
+		<h2>Навчання:</h2>
+		<ul>
+			<li>
+				<p class="title">
+					ХНУ
+					<span class="location">(Хмельницький Національний Університет)</span>
+				</p>
+				<p>
+					<span class="date">з 2000 по 2005</span>
+					- інженер-програміст (ІТП - Інформаційні технології проектування).
+				</p>
+			</li>
+		</ul>
+	</section>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Frontend.</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="frontend layouting web-development course lectures training education teaching">
+	<meta name="description" content="Course of Frontend">
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<style>
+		.so_options em {
+			color: #0c0;
+		}
+		.so_options .so_app {
+			display: inline-block;
+			margin-left: 24px;
+			min-width: 108px;
+		}
+		.sym-test-github-io a {
+			display: inline-block;
+			margin: 0 2px 12px;
+			padding: 4px 8px;
+			color: #aaa;
+			text-decoration: none;
+			border: 1px solid #eee;
+			border-radius: 6px;
+		}
+		.sym-test-github-io a:hover {
+			text-decoration: underline;
+			color: #888;
+			border-color: #ccc;
+		}
+		.sym-test-github-io a.err {
+			color: red;
+			font-weight: bold;
+		}
+		.sym-test-github-io a.wrn {
+			color: orange;
+		}
+	</style>
+
+</head>
+<body>
+<div class="mainwrapper">
+
+<div class="so_options">
+	<p class="h2">Screen options of your device:</p>
+	<p>Screen size: <em id="so_swidth">0</em> x <em id="so_sheight">0</em> px, <em id="so_scdepth"></em>/<em id="so_spdepth"></em> bit</p>
+	<p>Device pixel ratio: <em id="so_ratio">0</em></p>
+	<p>Screen avail: <em id="so_sawidth">0</em> x <em id="so_saheight">0</em> px, left: <em id="so_saleft">0</em> px, top: <em id="so_satop">0</em> px</p>
+	<p>
+		App:<br>
+		<span class="so_app">appName:</span> <em id="so_app"></em><br>
+		<span class="so_app">appCodeName:</span> <em id="so_appc"></em><br>
+		<span class="so_app">appVersion:</span> <em id="so_appv"></em><br>
+		<span class="so_app">os, cpu:</span> <em id="so_appp"></em><br>
+		<span class="so_app">userAgent:</span> <em id="so_appu"></em>
+	</p>
+	<p>Window inner size: <em id="so_wiwidth">0</em> x <em id="so_wiheight">0</em> px</p>
+	<p>Window outer size: <em id="so_wowidth">0</em> x <em id="so_woheight">0</em> px</p>
+	<p>Body outer size: <em id="so_bowidth">0</em> x <em id="so_boheight">0</em> px</p>
+	<p>Scrollbar size: <em id="so_scrollbar">0</em> px</p>
+</div>
+
+<br><hr><br>
+
+<h1>Frontend lecture course.</h1>
+
+<p><strong>Hey!</strong></p>
+<p>I'm web-developer and tutor.</p>
+<p>This site is used to teach the frontend course (in Ukrainian).</p>
+<p>At the moment there are about 160 hours lectures.</p>
+<p>The course continues to be further developed:</p>
+<ul>
+	<li>new materials (task runners, sockets, 3D-graphics, etc.) will be added;</li>
+	<li>materials will be broken down by topic, not by lectures (there will be about 300 topics);</li>
+	<li>there will be self-tests and test tasks;</li>
+	<li>homeworks was being modified and added;</li>
+	<li>Vue, React, Ember, Angular</li>
+	<li>course project for students</li>
+	<li>UI/UX course for web-developers and not only</li>
+</ul>
+
+<hr>
+
+<p>&copy; Poshtar Boba, <a href="mailto:poshtar.boba@gmail.com">poshtar.boba@gmail.com</a></p>
+
+<hr>
+
+<br>
+
+<p><a href="cv_uk.html">Резюме</a> <small>(укр)</small></p>
+<p><a href="pf.html">Портфоліо</a></p>
+<p><a href="fe/index.html">Лекції по фронтенду</a>.</p>
+<!--<p><a href="js-plugins/index.html">JS-плагіни, бібліотеки</a>.</p>-->
+
+<!--<p><a href="ujs-ucss.html">Юзер-скрипти, юзер-стилі</a>.</p>-->
+
+<br><hr></br>
+
+<h2 class="h3"><span class="underline-dashed js-slide-handle" data-target="#notebookRequirements">Мої вимоги до робочого ноутбука</span> <small>(2019)</small></h2>
+
+<div id="notebookRequirements">
+	<p>Під роботою мається на увазі програмування, використання інтернету, офісних програм, перегляд фільмів, гра в ігри, що не потребують потужних відеокарт, або ж 5-15-річної давнини.</p>
+
+	<ul>
+		<li>Матовий екран (менше бліків) з розширенням 1600х1024+</li>
+		<li>Якщо екран сенсорний - повинна бути проста можливість відключати сенсорність гарячими клавішами</li>
+		<li>Повноцінна клавіатура з цифровим блоком, клавіша fn правіше від ctrl</li>
+		<li>Зручні лівий Shift, Enter, стрілки, окремі кнопки home, end, pgUp, pgDn, наявність ins, pause</li>
+		<li>Окремі фізичні кнопки під тачпадом, тактильні границі тачпада</li>
+		<li>Не менше 3 usb (миша, колонки, флешка/диск/принтер...)</li>
+		<li>Невеликий блок живлення, низька потужність, мінімальна вентиляція (холодний і тихий ноут, маленька легка батарея, якої вистачить на 3-4 години автономної роботи)</li>
+		<li>Запасний блок живлення</li>
+		<li>SSD-вінчестер 128-250 Gb (1-2 операційні системи, Win7, Linux)</li>
+		<li>8, а краще 16 гб ОЗУ (чи можливість апгрейду)</li>
+		<li>Дешевий холодний процесор</li>
+		<li>Вбудована або дискретна офісна холодна відеокарта</li>
+		<li>Бездротова миша з маленьким usb-конектором, а ще краще - в купі з клавіатурою</li>
+		<li>Простий доступ до вентилятора і радіатора (щоб під час чистки не треба було розбирати пів-ноутбука)</li>
+	</ul>
+</div>
+
+<br><hr></br>
+
+<!--<h2>Історія.</h2>
+<p>
+	<a href="history/for_designer/index.html">Побажання дизайнерам від верстальника</a> (2010-2012 рр.)<br>
+	Більшість пунктів зараз викликають посмішку. Задроти скажуть - та майже все там можна було зробити на той час і без CSS3. Можливо. Та зауважте, що деякі моменти давалися потом і кров'ю, а сімпл-дизайни версталися на долар пачка, не було можливості здійснювати індивідуальний підхід до кожного макету.
+</p>
+<p>
+	<a href="history/parallax/index.html">CSS-паралакс</a> (2015 р.)<br>
+	Щось мене тоді надихнуло. Досі подобається: просто і красиво.
+</p>
+<p>
+	<a href="history/gradient-animation/index.html">Анімація градієнта на кнопці</a> (2017 р.)<br>
+	Іноді маленька анімація потребує великих зусиль.
+</p>
+<p>
+	<a href="history/zoom-img/index.html">Маштабування зображення</a> (2018 р.)<br>
+	Складна для уяви задача з переходом від однієї координатної сітки до іншої.
+</p>-->
+
+	<!--<p>Гра <a href="brd/index.html">Brd</a>.</p>-->
+
+<h2 class="h3"><span class="underline-dashed js-slide-handle" data-target="#symTestGithubIo">Testing filenames on github.io</span></h2>
+<div id="symTestGithubIo">
+	<p>
+		<em>You should not use never:</em> &nbsp; <strong># &nbsp; %</strong><br><br>
+		<em>and as first symbol:</em> &nbsp; <strong>_ &nbsp; ~ &nbsp; spacebar &nbsp; dot</strong><br><br>
+		<small><em>testing was on 2018-07-30</em></small>
+	</p>
+	<p class="sym-test-github-io">
+		<strong>Single symbol</strong><br><br>
+		<a href="symbols/!.html" target="_blank">!.html</a>
+		<a href="symbols/#.html" target="_blank" class="err" title="index.html" target="_blank">#.html</a>
+		<a href="symbols/$.html" target="_blank">$.html</a>
+		<a href="symbols/%.html" target="_blank" class="err" title="400 Bad Request">%.html</a>
+		<a href="symbols/&.html" target="_blank">&amp;.html</a>
+		<a href="symbols/'.html" target="_blank">'.html</a>
+		<a href="symbols/(.html" target="_blank">(.html</a>
+		<a href="symbols/).html" target="_blank">).html</a>
+		<a href="symbols/+.html" target="_blank">+.html</a>
+		<a href="symbols/,.html" target="_blank">,.html</a>
+		<a href="symbols/-.html" target="_blank">-.html</a>
+		<a href="symbols/ .html" target="_blank" class="wrn" title="404 page not found OR all ok">[spacebar].html</a>
+		<a href="symbols/..html" target="_blank" class="err" title="404 page not found">..html</a>
+		<a href="symbols/;.html" target="_blank">;.html</a>
+		<a href="symbols/=.html" target="_blank">=.html</a>
+		<a href="symbols/@.html" target="_blank">@.html</a>
+		<a href="symbols/[.html" target="_blank">[.html</a>
+		<a href="symbols/].html" target="_blank">].html</a>
+		<a href="symbols/^.html" target="_blank">^.html</a>
+		<a href="symbols/_.html" target="_blank" class="err" title="404 page not found">_.html</a>
+		<a href="symbols/`.html" target="_blank">`.html</a>
+		<a href="symbols/{.html" target="_blank">{.html</a>
+		<a href="symbols/}.html" target="_blank">}.html</a>
+		<a href="symbols/~.html" target="_blank" class="err" title="404 page not found">~.html</a>
+	</p>
+	<p class="sym-test-github-io">
+		<strong>First symbol</strong><br><br>
+		<a href="symbols/!b.html" target="_blank">!b.html</a>
+		<a href="symbols/#b.html" target="_blank" class="err" title="404 page not found" target="_blank">#b.html</a>
+		<a href="symbols/$b.html" target="_blank">$b.html</a>
+		<a href="symbols/%b.html" target="_blank" class="err" title="400 Bad Request">%b.html</a>
+		<a href="symbols/&b.html" target="_blank">&amp;b.html</a>
+		<a href="symbols/'b.html" target="_blank">'b.html</a>
+		<a href="symbols/(b.html" target="_blank">(b.html</a>
+		<a href="symbols/)b.html" target="_blank">)b.html</a>
+		<a href="symbols/+b.html" target="_blank">+b.html</a>
+		<a href="symbols/,b.html" target="_blank">,b.html</a>
+		<a href="symbols/-b.html" target="_blank">-b.html</a>
+		<a href="symbols/ b.html" target="_blank" class="wrn" title="404 page not found OR all ok">[spacebar]b.html</a>
+		<a href="symbols/.b.html" target="_blank" class="err" title="404 page not found">.b.html</a>
+		<a href="symbols/;b.html" target="_blank">;b.html</a>
+		<a href="symbols/=b.html" target="_blank">=b.html</a>
+		<a href="symbols/@b.html" target="_blank">@b.html</a>
+		<a href="symbols/[b.html" target="_blank">[b.html</a>
+		<a href="symbols/]b.html" target="_blank">]b.html</a>
+		<a href="symbols/^b.html" target="_blank">^b.html</a>
+		<a href="symbols/_b.html" target="_blank" class="err" title="404 page not found">_b.html</a>
+		<a href="symbols/`b.html" target="_blank">`b.html</a>
+		<a href="symbols/{b.html" target="_blank">{b.html</a>
+		<a href="symbols/}b.html" target="_blank">}b.html</a>
+		<a href="symbols/~b.html" target="_blank" class="err" title="404 page not found">~b.html</a>
+	</p>
+	<p class="sym-test-github-io">
+		<strong>Last symbol</strong><br><br>
+		<a href="symbols/a!.html" target="_blank">a!.html</a>
+		<a href="symbols/a#.html" target="_blank" class="err" title="404 page not found" target="_blank">a#.html</a>
+		<a href="symbols/a$.html" target="_blank">a$.html</a>
+		<a href="symbols/a%.html" target="_blank" class="err" title="400 Bad Request">a%.html</a>
+		<a href="symbols/a&.html" target="_blank">a&amp;.html</a>
+		<a href="symbols/a'.html" target="_blank">a'.html</a>
+		<a href="symbols/a(.html" target="_blank">a(.html</a>
+		<a href="symbols/a).html" target="_blank">a).html</a>
+		<a href="symbols/a+.html" target="_blank">a+.html</a>
+		<a href="symbols/a,.html" target="_blank">a,.html</a>
+		<a href="symbols/a-.html" target="_blank">a-.html</a>
+		<a href="symbols/a .html" target="_blank">a[spacebar].html</a>
+		<a href="symbols/a..html" target="_blank">a..html</a>
+		<a href="symbols/a;.html" target="_blank">a;.html</a>
+		<a href="symbols/a=.html" target="_blank">a=.html</a>
+		<a href="symbols/a@.html" target="_blank">a@.html</a>
+		<a href="symbols/a[.html" target="_blank">a[.html</a>
+		<a href="symbols/a].html" target="_blank">a].html</a>
+		<a href="symbols/a^.html" target="_blank">a^.html</a>
+		<a href="symbols/a_.html" target="_blank">a_.html</a>
+		<a href="symbols/a`.html" target="_blank">a`.html</a>
+		<a href="symbols/a{.html" target="_blank">a{.html</a>
+		<a href="symbols/a}.html" target="_blank">a}.html</a>
+		<a href="symbols/a~.html" target="_blank">a~.html</a>
+	</p>
+	<p class="sym-test-github-io">
+		<strong>Middle symbol</strong><br><br>
+		<a href="symbols/c!c.html" target="_blank">c!c.html</c>
+		<a href="symbols/c#c.html" target="_blank" class="err" title="404 page not found" target="_blank">c#c.html</c>
+		<a href="symbols/c$c.html" target="_blank">c$c.html</c>
+		<a href="symbols/c%c.html" target="_blank" class="err" title="400 Bad Request">c%c.html</c>
+		<a href="symbols/c&c.html" target="_blank">c&amp;c.html</c>
+		<a href="symbols/c'c.html" target="_blank">c'c.html</c>
+		<a href="symbols/c(c.html" target="_blank">c(c.html</c>
+		<a href="symbols/c)c.html" target="_blank">c)c.html</c>
+		<a href="symbols/c+c.html" target="_blank">c+c.html</c>
+		<a href="symbols/c,c.html" target="_blank">c,c.html</c>
+		<a href="symbols/c-c.html" target="_blank">c-c.html</c>
+		<a href="symbols/c c.html" target="_blank">c[spacebar]c.html</c>
+		<a href="symbols/c.c.html" target="_blank">c.c.html</c>
+		<a href="symbols/c;c.html" target="_blank">c;c.html</c>
+		<a href="symbols/c=c.html" target="_blank">c=c.html</c>
+		<a href="symbols/c@c.html" target="_blank">c@c.html</c>
+		<a href="symbols/c[c.html" target="_blank">c[c.html</c>
+		<a href="symbols/c]c.html" target="_blank">c]c.html</c>
+		<a href="symbols/c^c.html" target="_blank">c^c.html</c>
+		<a href="symbols/c_c.html" target="_blank">c_c.html</c>
+		<a href="symbols/c`c.html" target="_blank">c`c.html</c>
+		<a href="symbols/c{c.html" target="_blank">c{c.html</c>
+		<a href="symbols/c}c.html" target="_blank">c}c.html</c>
+		<a href="symbols/c~c.html" target="_blank">c~c.html</c>
+	</p>
+</div>
+
+
+<br><hr><br>
+
+<br><br><br>
+
+</div>
+
+<script src="screen_options.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
