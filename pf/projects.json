@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Хмель-HoMM",
+		"img": "heroes-iii.png",
+		"date": "2019-02",
+		"link": "/fe-heroes3/index.html",
+		"descr": "Маленька сторінка початкового рівня на тему фан-сайту Heroes of Might and Magic",
+		"tags": "учбовий проект, html5, responsive, full-pack",
+		"links": [
+			"https://github.com/poshtarboba/fe-heroes3 - github-репозиторій",
+			"/fe-heroes3/-/html5/index.html - версія html5 з адаптивністю"
+		]
+	}
+]
