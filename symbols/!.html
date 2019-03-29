@@ -6,9 +6,65 @@
 	<meta name="keywords" content="frontend layouting web-development course lectures training education teaching">
 	<meta name="description" content="Course of Frontend">
 </head>
+<style>
+	p { float: left; }
+	span, a, button { display: block; margin-bottom: 8px; border: 1px solid silver; background: none; text-align: center; padding: 8px 0; width: 100px; }
+	button { margin-bottom: 24px; }
+	p {margin: 0;}
+	.result {
+		margin-left: 120px;
+	}
+	.result:before {
+		content: "Result:";
+		display: block;
+		margin-bottom: 8px;
+		font-size: 120%;
+		font-weight: bold;
+	}
+</style>
 <body>
 
 <h1>Test !</h1>
+
+<p>
+<span class="hover">span hover</span>
+<a href="#" class="hover">a hover</a>
+<button class="hover">button hover</button>
+
+<span class="click">span click</span>
+<a href="#" class="click">a click</a>
+<button class="click">button click</button>
+
+<span class="hover-click">span h+c</span>
+<a href="#" class="hover-click">a h+c</a>
+<button class="hover-click">button h+c</button>
+</p>
+<div class="result"></div>
+
+<script>
+	let d = document;
+	d.q = d.querySelector;
+	c = 'click';
+	h = 'mouseenter';
+	let r = d.q('.result');
+	
+	d.q('span.hover').addEventListener(h, function(){r.innerHTML += 'span-hover hover<br>';});
+	d.q('a.hover').addEventListener(h, function(){r.innerHTML += 'a-hover hover<br>';});
+	d.q('button.hover').addEventListener(h, function(){r.innerHTML += 'button-hover hover<br>';});
+
+	d.q('span.click').addEventListener(c, function(){r.innerHTML += 'span-click click<br>';});
+	d.q('a.click').addEventListener(c, function(e){e.preventDefault();r.innerHTML += 'a-click click<br>';});
+	d.q('button.click').addEventListener(c, function(){r.innerHTML += 'button-click click<br>';});
+
+	d.q('span.hover-click').addEventListener(h, function(){r.innerHTML += 'span-h+c hover<br>';});
+	d.q('span.hover-click').addEventListener(c, function(){r.innerHTML += 'span-h+c click<br>';});
+
+	d.q('a.hover-click').addEventListener(h, function(){r.innerHTML += 'a-h+c hover<br>';});
+	d.q('a.hover-click').addEventListener(c, function(){r.innerHTML += 'a-h+c click<br>';});
+
+	d.q('button.hover-click').addEventListener(h, function(){r.innerHTML += 'button-h+c hover<br>';});
+	d.q('button.hover-click').addEventListener(c, function(){r.innerHTML += 'button-h+c click<br>';});
+</script>
 
 </body>
 </html>
