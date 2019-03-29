@@ -60,7 +60,7 @@
 	d.q('span.hover-click').addEventListener(c, function(){r.innerHTML += 'span-h+c click<br>';});
 
 	d.q('a.hover-click').addEventListener(h, function(){r.innerHTML += 'a-h+c hover<br>';});
-	d.q('a.hover-click').addEventListener(c, function(){r.innerHTML += 'a-h+c click<br>';});
+	d.q('a.hover-click').addEventListener(c, function(e){e.preventDefault();r.innerHTML += 'a-h+c click<br>';});
 
 	d.q('button.hover-click').addEventListener(h, function(){r.innerHTML += 'button-h+c hover<br>';});
 	d.q('button.hover-click').addEventListener(c, function(){r.innerHTML += 'button-h+c click<br>';});
