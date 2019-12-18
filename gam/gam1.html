@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>quest</title>
+	<style>
+		img, .gam { display: block; margin-bottom: 20px; }
+		input, button { cursor: pointer; }
+		.hint input.active { outline: 2px solid red; }
+	</style>
+</head>
+<body>
+	<img src="gam1.png" alt="gam">
+	<div class="gam"></div>
+	<button data-count="4">Random 4</button>
+	<button data-count="6">Random 6</button>
+	<button data-count="8">Random 8</button>
+	<input type="button" value="hint">
+	<h2>Start position:</h2>
+	<div class="start"></div>
+	<p>Алгоритм:</p>
+	<p>
+		1. Запоминаем все чекнутые кнопки (можно подсветить кнопкой hint).<br>
+		2. По памяти кликаем на каждую из этих кнопок.<br>
+		3. Запоминаем все не-чекнутые кнопки (выключи hint, новую комбинацию запомнить не сложно).<br>
+		4. По памяти кликаем на каждую из этих кнопок.
+	</p>
+</body>
+<script>
+
+	document.querySelectorAll('button').forEach(btn => { btn.onclick = (() => rnd(+btn.dataset.count)); });
+	rnd(4);
+	document.querySelector('[type="button"]').onclick = (() => document.body.classList.toggle('hint'));
+
+	function rnd(n){
+		let html = '';
+		for (let i = 0; i < n; i++) {
+			html += '<div>';
+			for (let j = 0; j < n; j++) html += `<input type="checkbox" data-x="${j}" data-y="${i}">`;
+			html += '</div>';
+		}
+		let gam = document.querySelector('.gam');
+		let start = document.querySelector('.start');
+		gam.innerHTML = start.innerHTML = html;
+		let inputsGam = gam.querySelectorAll('input');
+		let inputsStart = start.querySelectorAll('input');
+		inputsGam.forEach((input, i) => {
+			let rnd = Math.random() < .5;
+			input.checked = rnd;
+			if (rnd) input.classList.add('active');
+			inputsStart[i].checked = rnd;
+			inputsStart[i].disabled = true;
+			input.onchange = change;
+		});
+		function change(){
+			let x = +this.dataset.x;
+			let y = +this.dataset.y;
+			gam.querySelectorAll(`[data-x="${x}"]:not([data-y="${y}"])`).forEach(e => { e.checked = !e.checked; });
+			gam.querySelectorAll(`[data-y="${y}"]:not([data-x="${x}"])`).forEach(e => { e.checked = !e.checked; });
+		}
+	}
+
+</script>
+</html>
