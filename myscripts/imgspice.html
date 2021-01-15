@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<title>Script imgspice</title>
+	<meta charset="utf-8">
+	<style>
+		body { font-family: sans-serif; }
+		code { white-space: pre; }
+	</style>
+</head>
+<body>
+<p><a href="index.html">&lt;&lt;&lt; До списку скриптів</a></p>
+<h1>imgspice</h1>
+<hr>
+<code>// отримати список посилань:
+let urlList = '';
+document.querySelectorAll('a > img').forEach(img => {
+  if (urlList.length) urlList += '\n';
+  urlList += img.parentElement.getAttribute('href');
+});
+console.log(urlList);</code>
+<hr>
+<code>// отримати список посилань і зберегти посилання в LocalStorage:
+let urlList = '', urlCnt = 0;
+document.querySelectorAll('a > img').forEach(img => {
+  let href = img.parentElement.getAttribute('href');
+  if (href.indexOf('imgspice') === -1) return;
+  if (urlList.length) urlList += '\n';
+  urlList += href;
+  urlCnt++;
+});
+console.log(urlCnt + ' links found');
+let ls = localStorage.getItem('urllist');
+if (ls) urlList = ls + '\n' + urlList;
+localStorage.setItem('urllist', urlList);</code>
+<hr>
+<code>// скачати сторінки з зображеннями
+let allUrl = ``; // вставити посилання на сторінки із зображеннями
+
+allUrl = allUrl.split('\n');
+document.body.innerHTML = '';
+let p = document.createElement('p');
+p.innerHTML = 'total: ' + allUrl.length + '; ';
+let counterSpan = document.createElement('span');
+counterSpan.innerHTML = '0';
+p.appendChild(counterSpan);
+document.body.appendChild(p);
+let counter = 0;
+nextPage();
+function nextPage(){
+  if (!allUrl[counter]) return;
+  fetch(allUrl[counter]).then(e => e.text()).then(e => {
+    let div = document.createElement('div');
+    div.innerHTML = e;
+    let img = div.querySelector('img#imgpreview');
+    if (img) {
+      let res = localStorage.getItem('allsrc');
+      res = (res ? res + '\n' : '') + img.getAttribute('src');
+      localStorage.setItem('allsrc', res);
+    }
+    counter++;
+    counterSpan.innerText = counter;
+    nextPage();
+  });
+}</code>
+<hr>
+<code>// завантажити всі зображення (використовуй Chrome і, можливо, по пару тисяч зображень):
+let allSrc = ``; // вставити посилання на зображення
+
+let html = '&lt;style&gt;img{height:64px}&lt;/style&gt;\n';
+allSrc.split('\n').forEach(src => html += '&lt;img src="' + src + '"&gt;\n');
+document.body.innerHTML = html;</code>
+
+<br><br><br><br><br><br>
+</body>
+</html>
